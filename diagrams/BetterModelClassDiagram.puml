@@ -1,0 +1,17 @@
+@startuml
+!include style.puml
+skinparam arrowThickness 1.1
+skinparam arrowColor MODEL_COLOR
+skinparam classBackgroundColor MODEL_COLOR
+
+TaskList -up-|> ReadOnlyTaskList
+TaskList *-right-> "1" UniqueTaskList
+
+UniqueTaskList -right-> "*" Task : all
+
+Task *--> TaskName
+Task *--> TaskDescription
+Task *--> TaskPriority
+Task *--> TaskStatus
+Task *--> TaskDeadline
+@enduml
