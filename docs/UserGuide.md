@@ -273,7 +273,7 @@ Notes:
 * Existing values will be updated to the input values for that respective field.
 
 Result:
-* If no fields is provided, an error message will be displayed.
+* If no fields are provided, an error message will be displayed.
 * Otherwise, the app replaces the value in the field you specified with the value you provided.
 
 Examples:
