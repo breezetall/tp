@@ -619,12 +619,6 @@ and efficient way to backtrack the last action, restoring the previous state eff
 desired result is to delete the task you want to remove the deadline, then add that task again with all the old fields
 except for deadline. The process is somewhat tedious, but it gives you what you desired.
 
-**Q**: Why do you allow duplicate person names? How am I going to differentiate them in the application?<br>
-**A**: We strongly believed that in real life context, people sharing the same name is not a rare occurrence.
-Therefore, we believe it is beneficial for you to be able to add multiple people with the same name. In case of
-differentiate between people with same name, you can use other information such as phone numbers or 
-emails to point out people with the same name.
-
 --------------------------------------------------------------------------------------------------------------------
 
 ## Known issues
