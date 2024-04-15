@@ -504,7 +504,7 @@ Notes:
 
 Result:
 * If the `TASK_INDEX` provided is invalid, an error message is displayed.
-* If no optional fields is provided, an error message is displayed.
+* If no optional fields are provided, an error message is displayed.
 * Otherwise, the app replaces the value in the field you specified with the value you provided.
 
 Examples:
