@@ -154,8 +154,7 @@ them back into corresponding objects.
 treated as one of the three classes (if only the functionality of only one is needed).
 * depends on some classes in the `Model` component (because the `Storage` component's job is to 
 save/retrieve objects that belong to the `Model`)
-
-<br>
+--------------------------------------------------------------------------------------------------------------------
 <br>
 <br>
 
@@ -163,7 +162,7 @@ save/retrieve objects that belong to the `Model`)
 
 Classes used by multiple components are in the `seedu.addressbook.commons` package.
 
---------------------------------------------------------------------------------------------------------------------
+
 <div style="page-break-after: always;"></div>
 
 ## **Implementation**
@@ -319,7 +318,6 @@ Step 6. The user then decides to execute the command `listtask`. Commands that d
 --------------------------------------------------------------------------------------------------------------------
 <br>
 <br>
-<br>
 
 ## **Documentation, logging, testing, configuration, dev-ops**
 
@@ -446,7 +444,6 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 or a terminal window
 * **Action**: TeamTracker processing a user command
 
---------------------------------------------------------------------------------------------------------------------
 <div style="page-break-after: always;"></div>
 
 ## **Appendix: Planned Enhancements**
