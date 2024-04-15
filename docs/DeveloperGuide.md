@@ -82,7 +82,7 @@ The `UI` component,
 
 ### Logic component
 
-**API** : [`Logic.java`](https://github.com/sAY2324S2-CS2103T-W13-4/tp/blob/master/src/main/java/seedu/address/logic/Logic.java)
+**API** : [`Logic.java`](https://github.com/AY2324S2-CS2103T-W13-4/tp/blob/master/src/main/java/seedu/address/logic/Logic.java)
 
 Here's a (partial) class diagram of the `Logic` component:
 
@@ -272,6 +272,8 @@ Step 4. The user now decides that adding the person was a mistake, and decides t
 
 </box>
 
+<div style="page-break-after: always;"></div>
+
 The following sequence diagram shows how an undo operation goes through the `Logic` component:
 
 <puml src="diagrams/UndoSequenceDiagram-Logic.puml" alt="UndoSequenceDiagram-Logic" />
@@ -318,6 +320,7 @@ Step 6. The user then decides to execute the command `listtask`. Commands that d
 <br>
 <br>
 <br>
+
 ## **Documentation, logging, testing, configuration, dev-ops**
 
 * [Documentation guide](Documentation.md)
