@@ -9,14 +9,13 @@
 <!-- * Table of Contents -->
 <page-nav-print />
 
---------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
 
 ## **Setting up, getting started**
 
 Refer to the guide [_Setting up and getting started_](SettingUp.md).
 
 --------------------------------------------------------------------------------------------------------------------
-<div style="page-break-after: always;"></div>
 
 ## **Design**
 
@@ -30,7 +29,7 @@ Given below is a quick overview of main components and how they interact with ea
 
 **Main components of the architecture**
 
-**`Main`** (consisting of classes [`Main`](https://github.com/se-edu/addressbook-level3/tree/master/src/main/java/seedu/address/Main.java) and [`MainApp`](https://github.com/se-edu/addressbook-level3/tree/master/src/main/java/seedu/address/MainApp.java)) is in charge of the app launch and shut down.
+**`Main`** (consisting of classes [`Main`](https://github.com/nus-cs2103-AY2324S2/tp/blob/master/src/main/java/seedu/address/Main.java) and [`MainApp`](https://github.com/nus-cs2103-AY2324S2/tp/blob/master/src/main/java/seedu/address/MainApp.java)) is in charge of the app launch and shut down.
 * At app launch, it initializes the other components in the correct sequence, and connects them up with each other.
 * At shut down, it shuts down the other components and invokes cleanup methods where necessary.
 
@@ -60,6 +59,8 @@ For example, the `Logic` component defines its API in the `Logic.java` interface
 
 The sections below give more details of each component.
 
+<div style="page-break-after: always;"></div>
+
 ### UI component
 
 The **API** of this component is specified in [`Ui.java`](https://github.com/AY2324S2-CS2103T-W13-4/tp/blob/master/src/main/java/seedu/address/ui/Ui.java)
@@ -77,9 +78,11 @@ The `UI` component,
 * keeps a reference to the `Logic` component, because the `UI` relies on the `Logic` to execute commands.
 * depends on some classes in the `Model` component, as it displays `Person` object residing in the `Model`.
 
+<div style="page-break-after: always;"></div>
+
 ### Logic component
 
-**API** : [`Logic.java`](https://github.com/se-edu/addressbook-level3/tree/master/src/main/java/seedu/address/logic/Logic.java)
+**API** : [`Logic.java`](https://github.com/sAY2324S2-CS2103T-W13-4/tp/blob/master/src/main/java/seedu/address/logic/Logic.java)
 
 Here's a (partial) class diagram of the `Logic` component:
 
@@ -93,6 +96,8 @@ The sequence diagram below illustrates the interactions within the `Logic` compo
 
 **Note:** The lifeline for `DeleteTaskCommandParser` should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline continues till the end of diagram.
 </box>
+
+<div style="page-break-after: always;"></div>
 
 How the `Logic` component works:
 
@@ -110,11 +115,12 @@ How the parsing works:
 * When called upon to parse a user command, the `AddressBookParser` class creates an `XYZCommandParser` (`XYZ` is a placeholder for the specific command name e.g., `AddTaskCommandParser`) which uses the other classes shown above to parse the user command and create a `XYZCommand` object (e.g., `AddTaskCommand`) which the `AddressBookParser` returns back as a `Command` object.
 * All `XYZCommandParser` classes (e.g., `AddTaskCommandParser`, `DeleteTaskCommandParser`, ...) inherit from the `Parser` interface so that they can be treated similarly where possible e.g, during testing.
 
+<div style="page-break-after: always;"></div>
+
 ### Model component
 **API** : [`Model.java`](https://github.com/AY2324S2-CS2103T-W13-4/tp/blob/master/src/main/java/seedu/address/model/Model.java)
 
 <puml src="diagrams/ModelClassDiagram.puml" width="675" />
-
 
 The `Model` component,
 
@@ -133,10 +139,11 @@ The `Model` component,
 
 </box>
 
+<div style="page-break-after: always;"></div>
 
 ### Storage component
 
-**API** : [`Storage.java`](https://github.com/se-edu/addressbook-level3/tree/master/src/main/java/seedu/address/storage/Storage.java)
+**API** : [`Storage.java`](https://github.com/AY2324S2-CS2103T-W13-4/tp/blob/master/src/main/java/seedu/address/storage/Storage.java)
 
 <puml src="diagrams/StorageClassDiagram.puml" width="850" />
 
@@ -147,6 +154,10 @@ them back into corresponding objects.
 treated as one of the three classes (if only the functionality of only one is needed).
 * depends on some classes in the `Model` component (because the `Storage` component's job is to 
 save/retrieve objects that belong to the `Model`)
+
+<br>
+<br>
+<br>
 
 ### Common classes
 
@@ -210,6 +221,10 @@ Step 6. The user executes `deletetaskgroup gn/2103T gt/Task 1` command to remove
 Step 7. The user executes `deletegroup gn/2103T` command to remove the group from the list. The `deletegroup` command calls `Model#removeGroup(String)`, which finds the group with the same name and remove that group from the list.
 
 <puml src="diagrams/GroupingState0.puml" alt="GroupingState0" />
+
+<br>
+<br>
+<br>
 
 ### \[Proposed\] Undo/Redo Feature
 
@@ -300,8 +315,9 @@ Step 6. The user then decides to execute the command `listtask`. Commands that d
   * Cons: We must ensure that the implementation of each individual command are correct.
 
 --------------------------------------------------------------------------------------------------------------------
-<div style="page-break-after: always;"></div>
-
+<br>
+<br>
+<br>
 ## **Documentation, logging, testing, configuration, dev-ops**
 
 * [Documentation guide](Documentation.md)
@@ -310,7 +326,6 @@ Step 6. The user then decides to execute the command `listtask`. Commands that d
 * [Configuration guide](Configuration.md)
 * [DevOps guide](DevOps.md)
 
---------------------------------------------------------------------------------------------------------------------
 <div style="page-break-after: always;"></div>
 
 ## **Appendix: Requirements**
@@ -429,6 +444,7 @@ or a terminal window
 * **Action**: TeamTracker processing a user command
 
 --------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
 
 ## **Appendix: Planned Enhancements**
 
@@ -471,6 +487,8 @@ testers are expected to do more *exploratory* testing.
 
    1. Re-launch the app by double-clicking the jar file.<br>
        Expected: The most recent window size and location is retained.
+
+<div style="page-break-after: always;"></div>
 
 ### Deleting a person
 
